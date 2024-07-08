@@ -1,7 +1,5 @@
 # MetaWeather: Few-shot Weather-Degraded Image Restoration
-The official code for 
-
-> MetaWeather: Few-shot Weather-Degraded Image Restoration (ECCV 2024)
+The official code for [MetaWeather: Few-shot Weather-Degraded Image Restoration](https://arxiv.org/abs/2308.14334) (ECCV 2024).
 
 # Setup
 ```
@@ -48,7 +46,7 @@ Download the datasets below:
 * RealSnow [[Link]](https://github.com/zhuyr97/WGWS-Net)
 
 ## Pretrained MetaWeather Model
-Download checkpoints [[Link]](https://drive.google.com/drive/folders/1DDGlP-eLavrJnSM9JP6L3kOKgOVLHh7n?usp=sharing)
+Download checkpoints [[Link]](https://drive.google.com/drive/folders/1eyeaTLQXeLREhMGYYWb9MfjYTz1K7DHG?usp=sharing)
 * Place them in `./checkpoints/`
 
 ## Prerequisite
@@ -105,4 +103,4 @@ TODO
 ```
 
 # Acknowledgements
-TODO
+This work was supported by Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT) (No.2019-0-01126, Self-learning based Autonomic IoT Edge Computing).
