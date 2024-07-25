@@ -60,9 +60,9 @@
                 <span class="author-block">
                   <a href="https://ygcho.com" target="_blank">Younggeol Cho</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="https://scholar.google.com/citations?hl=ko&user=0WU4MlkAAAAJ" target="_blank">Thanh-Tung Nguyen</a>
+                    <a href="https://scholar.google.com/citations?hl=ko&user=0WU4MlkAAAAJ" target="_blank">Thanh-Tung Nguyen,</a>
                     <span class="author-block">
-                      <a href="https://maga33.github.io/" target="_blank">Seunghoon Hong</a>
+                      <a href="https://maga33.github.io/" target="_blank">Seunghoon Hong,</a>
                       <span class="author-block">
                         <a href="http://cds.kaist.ac.kr/cdsn/?p=29" target="_blank">Dongman Lee</a>
                       </span>
@@ -89,7 +89,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -97,7 +97,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -133,9 +133,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/qual_suppl_bid.png" alt="Teaser image">
+      <img src="static/images/fig2v2.png" alt="MetaWeather architecture"/>
       <h2 class="subtitle has-text-centered">
-        Qualitative comparison on the BID Task \RNum{2}.A dataset      
+        Overall architecture of MetaWeather. MetaWeather consists of a hierarchical encoder-decoder design and matching module. Our matching module matches the degradation pattern between query and support set images, which enables MetaWeather to fully utilize a few-shot support set. The matching results are passed on to the decoder blocks at each level, and the extracted degradation pattern of the query image is then subtracted from the query image, resulting in the clean query image.
       </h2>
     </div>
   </div>
@@ -164,12 +164,7 @@
     <div class="container">
       <h2 class="title is-3">Method</h2>
 
-      <img src="static/images/fig2v2.png" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Overall architecture of MetaWeather. MetaWeather consists of a hierarchical encoder-decoder design and matching module. Our matching module matches the degradation pattern between query and support set images, which enables MetaWeather to fully utilize a few-shot support set. The matching results are passed on to the decoder blocks at each level, and the extracted degradation pattern of the query image is then subtracted from the query image, resulting in the clean query image.
-      </h2>
-
-      <img src="static/images/fig3.png" alt="MY ALT TEXT"/>
+      <img src="static/images/fig3.png" alt="Attention modules"/>
       <h2 class="subtitle has-text-centered">
         Attention modules in our matching module.
       </h2>
@@ -178,6 +173,22 @@
 </div>
 </div>
 </section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Results</h2>
+      <img src="static/images/qual_suppl_bid.png" alt="Teaser image">
+      <h2 class="subtitle has-text-centered">
+        Qualitative comparison on the BID Task Ⅱ.A dataset. For more results, please refer to the paper.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+
 
 <!-- Image carousel -->
 <!-- <section class="hero is-small">
