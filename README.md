@@ -1,106 +1,48 @@
-# MetaWeather: Few-shot Weather-Degraded Image Restoration
-The official code for [MetaWeather: Few-shot Weather-Degraded Image Restoration](https://arxiv.org/abs/2308.14334) (ECCV 2024).
-
-# Setup
-```
-    MetaWeather
-    ├ data
-    │   ├ BID
-    │   │  ├ case1
-    │   │  ├ case2
-    │   │  ├ ...
-    │   │  ├ case6
-    │   │  └ gt
-    │   ├ SPAData/real_test_100
-    │   │  ├ input
-    │   │  └ gt
-    │   ├ realsnow
-    │   │  ├ train
-    │   │  │  ├ input
-    │   │  │  └ gt
-    │   │  └ test
-    │   │     ├ input
-    │   │     └ gt
-    │   ├ BID-case1-train.txt
-    │   ├ BID-case1-test.txt
-    │   ├ BID-case2-train.txt
-    │   ├ BID-case2-test.txt
-    │   ├ ...
-    │   ├ BID-case6-test.txt
-    │   ├ spadata-train.txt
-    │   ├ spadata-test.txt
-    │   ├ realsnow-train.txt
-    │   ├ realsnow-test.txt
-    │   └ simmim_pretrain__swin_base__img192_window6__800ep.pth
-    └ checkpoints
-        ├ metaweather_meta_train.pth
-        ├ metaweather_1shot_case1.pth
-        ├ metaweather_1shot_case2.pth
-        ├ ...
-```
-
-## Datasets
-Download the datasets below:
-* BID Dataset [[Link]](https://github.com/JunlinHan/BID)
-* SPA-Data [[Link]](https://github.com/stevewongv/SPANet)
-* RealSnow [[Link]](https://github.com/zhuyr97/WGWS-Net)
-
-## Pretrained MetaWeather Model
-Download checkpoints [[Link]](https://drive.google.com/drive/folders/1eyeaTLQXeLREhMGYYWb9MfjYTz1K7DHG?usp=sharing)
-* Place them in `./checkpoints/`
-
-## Prerequisite
-Use conda environment: 
-```bash
-conda env create -f env.yaml
-```
-
-## Swin Transformer
-If you want to train the model from the scratch, download `simmim_pretrain__swin_base__img192_window6__800ep.pth` from [[Link]](https://github.com/microsoft/SimMIM)
-* Place the file in `data`.
-
-# Usage
-## Meta-Train
-```bash
-python3 train.py --stage=0 --meta_train=True --exp_name=test
-```
-
-## Meta-Test
-```bash
-python3 train.py --stage=1 --case=<case> --meta_train=True --exp_name=test --checkpoint=<path-to-checkpoint>
-```
-* case: (1-6) BID Task II.A Case 1-6, (7) SPA-Data, (8) RealSnow
-
-## Evaluation
-```bash
-python3 test.py --case=<case> --exp_name=test --checkpoint=<path-to-checkpoint>
-```
-* case: (1-6) BID Task II.A Case 1-6, (7) SPA-Data, (8) RealSnow
-
-Examples
-
-```bash
-python3 test.py --case=1 --checkpoint=./checkpoints/metaweather_1shot_case1.pth
-```
-
-```bash
-python3 test.py --case=3 --checkpoint=./checkpoints/metaweather_1shot_case3.pth
-```
-
-Tested on Ubuntu 20.04, NVIDIA RTX 3090, CUDA 11.7, PyTorch 2.0.1, Python 3.10
+# Academic Project Page Template
+This is an academic paper project page template.
 
 
-# References
-Our code is built upon the following works:
-* [Visual Token Matching](https://github.com/GitGyun/visual_token_matching)
-* [Transweather](https://github.com/jeya-maria-jose/TransWeather)
-* [NAFNet](https://github.com/megvii-research/NAFNet)
-* [Swin Transformer](https://github.com/microsoft/Swin-Transformer)
+Example project pages built using this template are:
+- https://vision.huji.ac.il/spectral_detuning/
+- https://vision.huji.ac.il/podd/
+- https://dreamix-video-editing.github.io
+- https://vision.huji.ac.il/conffusion/
+- https://vision.huji.ac.il/3d_ads/
+- https://vision.huji.ac.il/ssrl_ad/
+- https://vision.huji.ac.il/deepsim/
 
- # Citation
-```bibtex
-TODO
-```
 
-# Acknowledgements
-This work was supported by Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT) (No.2019-0-01126, Self-learning based Autonomic IoT Edge Computing).
+
+## Start using the template
+To start using the template click on `Use this Template`.
+
+The template uses html for controlling the content and css for controlling the style. 
+To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+
+**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+
+## Components
+- Teaser video
+- Images Carousel
+- Youtube embedding
+- Video Carousel
+- PDF Poster
+- Bibtex citation
+
+## Tips:
+- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
+- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
+(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
+- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
+- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
+- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
+- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
+- This project page can also be made into a github pages website.
+- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
+- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://pages.cs.huji.ac.il/eliahu-horwitz/](https://pages.cs.huji.ac.il/eliahu-horwitz/)
+
+## Acknowledgments
+Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+
+## Website License
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
