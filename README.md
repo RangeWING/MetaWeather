@@ -1,4 +1,6 @@
-# MetaWeather: Few-shot Weather-Degraded Image Restoration
+# MetaWeather: Few-shot Weather-Degraded Image Restoration (ECCV 2024)
+## [Project Page](https://rangewing.github.io/MetaWeather/) &nbsp;|&nbsp; [Paper](https://arxiv.org/abs/2308.14334)
+
 The official code for [MetaWeather: Few-shot Weather-Degraded Image Restoration](https://arxiv.org/abs/2308.14334) (ECCV 2024).
 
 # Setup
