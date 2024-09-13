@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="MetaWeather: Few-shot Weather-Degraded Image Restoration">
   <meta name="twitter:description" content="ECCV 2024">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/fig2v2.png">
+  <meta name="twitter:image" content="static/images/mw_figure.webp">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="computer vison, image restoration, ECCV">
@@ -133,9 +133,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/fig2v2.png" alt="MetaWeather architecture"/>
+      <img src="static/images/mw_figure.webp" alt="MetaWeather overview"/>
       <h2 class="subtitle has-text-centered">
-        Overall architecture of MetaWeather. MetaWeather consists of a hierarchical encoder-decoder design and matching module. Our matching module matches the degradation pattern between query and support set images, which enables MetaWeather to fully utilize a few-shot support set. The matching results are passed on to the decoder blocks at each level, and the extracted degradation pattern of the query image is then subtracted from the query image, resulting in the clean query image.
+        <!-- Overview. -->
+        We propose MetaWeather, a novel few-shot weather-degraded image restoration method that enables restoration under <b>any unseen weather conditions</b>. To the best of our knowledge, this is the first work introducing few-shot learning to the image restoration task for unseen weather conditions without any prior assumption. 
+
       </h2>
     </div>
   </div>
@@ -164,10 +166,18 @@
     <div class="container">
       <h2 class="title is-3">Method</h2>
 
+      <img src="static/images/mw_method.png" alt="MetaWeather architecture"/>
+      <p>&nbsp;</p>
+      <img src="static/images/fig2v2.png" alt="MetaWeather architecture"/>
+      <h3 class="has-text-centered">
+        Overall architecture of MetaWeather. MetaWeather consists of a hierarchical encoder-decoder design and matching module. Our matching module matches the degradation pattern between query and support set images, which enables MetaWeather to fully utilize a few-shot support set. The matching results are passed on to the decoder blocks at each level, and the extracted degradation pattern of the query image is then subtracted from the query image, resulting in the clean query image.
+      </h3>
+      <p>&nbsp;</p>
+
       <img src="static/images/fig3.png" alt="Attention modules"/>
-      <h2 class="subtitle has-text-centered">
+      <h3 class="has-text-centered">
         Attention modules in our matching module.
-      </h2>
+      </h3>
     </div>
   </div>
 </div>
@@ -178,10 +188,16 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Results</h2>
-      <img src="static/images/qual_suppl_bid.png" alt="Teaser image">
+      <h3><b>Qualitative Comparisons</b></h3>
+      <img src="static/images/mw_qual.webp" alt="Qualitative comparison">
       <h2 class="subtitle has-text-centered">
-        Qualitative comparison on the BID Task Ⅱ.A dataset. For more results, please refer to the paper.
+        <!-- Qualitative comparisons. For more results, please refer to the paper. -->
       </h2>
+      <h3><b>Effect of Degradation Pattern Matching</b></h3>
+      <img src="static/images/qual_suppl_vtm_hor.webp" alt="Effect of Degradation Pattern Matching">
+      <h2 class="subtitle has-text-centered"><!-- --></h2>
+      <h3><b>Effect of Spatial-Channel Matching</b></h3>
+      <img src="static/images/fig_abl_mm.webp" alt="Effect of Spatial-Channel Matchingg">
     </div>
   </div>
 </div>
